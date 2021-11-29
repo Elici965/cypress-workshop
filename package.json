@@ -1,5 +1,5 @@
 {
-  "name": "cypress-workshop",
+  "name": "workshop-cypress",
   "version": "1.0.0",
   "description": "\"# cypress-workshop\"",
   "main": "index.js",
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/Elici965/cypress-workshop.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "elizabeth <elici965@gmail.com> (elici965)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Elici965/cypress-workshop/issues"
   },
@@ -24,5 +24,11 @@
   },
   "devDependencies": {
     "typescript": "^4.5.2"
-  }
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "cypress"
+  ]
 }
