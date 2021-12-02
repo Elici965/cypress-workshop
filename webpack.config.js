@@ -1,16 +1,18 @@
 module.exports = {
 resolve: {
-    extensions: ['.ts', '.js'],
+  extensions: ['.ts', '.js'],
 },
-module: {
-    rules: [
+module: 
+{
+  rules: 
+  [
     {
-        test: /\.ts$/,
-        exclude: [/node_modules/],
-        use: [{
-        loader: 'ts-loader',
-        }],
+      test: /\.ts$/,
+      exclude: [/node_modules/],
+      use: [{
+      loader: 'ts-loader',
+      }],
     },
-    ],
+  ],
 },
 }
