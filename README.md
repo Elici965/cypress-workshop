@@ -1,2 +1,1 @@
-"# cypress-workshop" 
-"# cypress-workshop" 
+"# cypress-workshop"
