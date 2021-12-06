@@ -1,0 +1,34 @@
+{
+  "name": "workshop-cypress",
+  "version": "1.0.0",
+  "description": "\"# cypress-workshop\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elici965/cypress-workshop.git"
+  },
+  "author": "elizabeth <elici965@gmail.com> (elici965)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Elici965/cypress-workshop/issues"
+  },
+  "homepage": "https://github.com/Elici965/cypress-workshop#readme",
+  "dependencies": {
+    "@cypress/webpack-preprocessor": "^5.10.0",
+    "cypress": "^9.1.0",
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.64.4"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "cypress"
+  ]
+}
