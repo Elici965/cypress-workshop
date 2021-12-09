@@ -18,11 +18,11 @@
   "homepage": "https://github.com/Elici965/cypress-workshop#readme",
   "dependencies": {
     "@cypress/webpack-preprocessor": "^5.10.0",
-    "cypress": "^9.1.0",
     "ts-loader": "^9.2.6",
     "webpack": "^5.64.4"
   },
   "devDependencies": {
+    "cypress": "^9.1.1",
     "typescript": "^4.5.2"
   },
   "keywords": [
