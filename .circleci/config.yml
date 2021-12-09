@@ -21,8 +21,8 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - .
-
+            - node_modules/*
+            - cypress/*
   test:
     docker:
       # The primary container is an instance of the first image listed. The job's commands run in this container.
