@@ -4,6 +4,7 @@ node_modules
 ### Ignore for cypress
 cypress/videos
 cypress/screenshots
+cypress/plugins
 
 ### Ignore for VsCode
 .vscode
