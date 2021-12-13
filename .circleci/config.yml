@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.9.0
-  browser-tools: circleci/browser-tools@1.1.0  
+  browser-tools: circleci/browser-tools@1.1.0
 
 jobs:
   build:
@@ -34,15 +34,16 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
       # The secondary container is an instance of the second listed image which is run in a common network where ports exposed on the primary container are available on localhost.
     steps:
-      - browser-tools/install-browser-tools
-      - checkout
       # Reuse the workspace from the build job
       - attach_workspace:
           at: .
-      - run:
+      - browser-tools/install-browser-tools
+      - checkout
+      - run: |
           node --version
           java --version
           google-chrome --version
+      - run:
           name: Test
           command: npm test
       - run:
