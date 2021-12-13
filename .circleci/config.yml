@@ -25,16 +25,7 @@ jobs:
             - node_modules/*
             - cypress/*
   test:
-    docker:
-      # The primary container is an instance of the first image listed. The job's commands run in this container.
-      - image: cimg/node:current
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-      # The secondary container is an instance of the second listed image which is run in a common network where ports exposed on the primary container are available on localhost.
     steps:
-      - checkout
-      - run: node --version
       # Reuse the workspace from the build job
       - attach_workspace:
           at: .
