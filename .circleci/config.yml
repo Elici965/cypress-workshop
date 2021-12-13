@@ -13,7 +13,6 @@ jobs:
       - checkout
       # Install the latest npm - the node Orb takes care of it
       - node/install-npm
-      - cypress/run
       # Install dependencies - the node Orb take care of installation and dependency caching
       - node/install-packages:
           app-dir: ~/mern-starter
@@ -26,6 +25,19 @@ jobs:
             - .
             - node_modules/*
             - cypress/*
+
+  build:
+      jobs:
+        - cypress/install:
+            build: 'npm run build' # run a custom app build step
+        - cypress/run:
+            requires:
+              - cypress/install
+            record: true # record results on Cypress Dashboard
+            parallel: true # split all specs across machines
+            parallelism: 4 # use 4 CircleCI machines to finish quickly
+            group: 'all tests' # name this group "all tests" on the dashboard
+            start: 'npm start' # start server before running tests
   test:
     docker:
       # The primary container is an instance of the first image listed. The job's commands run in this container.
