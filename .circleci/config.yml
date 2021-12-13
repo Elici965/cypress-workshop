@@ -2,7 +2,6 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.9.0
-  cypress: cypress-io/cypress@1.29.0
 
 jobs:
   build:
@@ -34,6 +33,8 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
       # The secondary container is an instance of the second listed image which is run in a common network where ports exposed on the primary container are available on localhost.
     steps:
+      - checkout
+      - run: node --version
       # Reuse the workspace from the build job
       - attach_workspace:
           at: .
