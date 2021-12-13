@@ -36,7 +36,7 @@ jobs:
       # Reuse the workspace from the build job
       - attach_workspace:
           at: .
-      - npm install --save-dev cypress
+      - npm install cypress@3.4.1
       - run:
           name: Test
           command: npm test
