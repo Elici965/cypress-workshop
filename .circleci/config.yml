@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.9.0
+  cypress: cypress-io/cypress@1
 
 jobs:
   build:
@@ -12,6 +13,7 @@ jobs:
       - checkout
       # Install the latest npm - the node Orb takes care of it
       - node/install-npm
+      - cypress/run
       # Install dependencies - the node Orb take care of installation and dependency caching
       - node/install-packages:
           app-dir: ~/mern-starter
@@ -36,7 +38,6 @@ jobs:
       # Reuse the workspace from the build job
       - attach_workspace:
           at: .
-      - npm install cypress@3.4.1
       - run:
           name: Test
           command: npm test
