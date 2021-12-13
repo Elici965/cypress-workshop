@@ -37,7 +37,6 @@ jobs:
       # Reuse the workspace from the build job
       - attach_workspace:
           at: .
-      - jobs:
       - cypress/run
       - run:
           name: Test
