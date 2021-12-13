@@ -19,17 +19,17 @@ jobs:
           cache-path: node_modules
           override-ci-command: npm i
       # Save workspace for subsequent jobs (i.e. test)
-      - persist_to_workspace:
-          root: .
-          paths:
-            - .
-            - node_modules/*
-            - cypress/*
       - cypress/install:
             build: 'npm run build' # run a custom app build step
       - cypress/run:
           requires:
           - cypress/install
+       - persist_to_workspace:
+          root: .
+          paths:
+            - .
+            - node_modules/*
+            - cypress/*
   test:
     docker:
       # The primary container is an instance of the first image listed. The job's commands run in this container.
