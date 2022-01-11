@@ -4,6 +4,7 @@
   "description": "\"# cypress-workshop\"",
   "main": "index.js",
   "scripts": {
+    "open": "cypress open",
     "test": "cypress run"
   },
   "repository": {
