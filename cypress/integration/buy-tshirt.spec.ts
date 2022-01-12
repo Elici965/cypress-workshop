@@ -1,13 +1,4 @@
-import { MenuContentPage } from '../page';
-import { ProductListPage } from '../page';
-import { ProductAddedModal } from '../page';
-import { SummaryPage } from '../page';
-import { SignInPage } from '../page';
-import { AddressPage } from '../page';
-import { ShippingPage } from '../page';
-import { PaymentPage } from '../page';
-import { BankPaymentPage } from '../page';
-import { OrderSummary } from '../page';
+import { MenuContentPage,ProductListPage,ProductAddedModal, SummaryPage,SignInPage, AddressPage, ShippingPage, PaymentPage, BankPaymentPage, OrderSummary } from '../page';
 
 describe('Buy a t-shirt', () => {
     const menuContentPage: MenuContentPage = new MenuContentPage();
