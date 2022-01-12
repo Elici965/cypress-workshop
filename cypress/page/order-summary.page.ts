@@ -7,7 +7,6 @@ export class OrderSummary {
 
     public getConfirmOrder() {
         var txt = cy.get(this.txtOrderComplete);
-        debugger;
         return txt;
     }
 }
