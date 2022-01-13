@@ -1,20 +1,40 @@
+import { 
+  MenuContentPage,
+  ProductListPage,
+  ProductAddedModal, 
+  SummaryPage,
+  SignInPage, 
+  AddressPage, 
+  ShippingPage, 
+  PaymentPage, 
+  BankPaymentPage, 
+  OrderSummary
+} from '../page';
+
 describe('Buy a t-shirt', () => {
+    const menuContentPage: MenuContentPage = new MenuContentPage();
+    const productListPage: ProductListPage = new ProductListPage();
+    const productAddedModal: ProductAddedModal = new ProductAddedModal();
+    const summaryPage: SummaryPage = new SummaryPage();
+    const signInPage: SignInPage = new SignInPage();
+    const addressPage: AddressPage = new AddressPage();
+    const shippingPage: ShippingPage = new ShippingPage();
+    const paymentPage: PaymentPage = new PaymentPage();
+    const bankPaymentPage: BankPaymentPage = new BankPaymentPage();
+    const orderSummary: OrderSummary = new OrderSummary();
+
     it('Then should be bought a t-shirt', () => {
         cy.visit('http://automationpractice.com/');
-        cy.get('#block_top_menu > ul > li:nth-child(3) > a').click();
-        cy.get('#center_column a.button.ajax_add_to_cart_button.btn.btn-default').click();
-        cy.get('[style*="display: block;"] .button-container > a').click();
-        cy.get('.cart_navigation span').click();
-        cy.get('#email').type('aperdomobo@gmail.com');
-        cy.get('#passwd').type('WorkshopProtractor');
-        cy.get('#SubmitLogin > span').click();
-
-        cy.get('#center_column > form > p > button > span').click();
-        cy.get('#cgv').click();
-        cy.get('#form > p > button > span').click();
-        cy.get('#HOOK_PAYMENT > div:nth-child(1) > div > p > a').click();
-        cy.get('#cart_navigation > button > span').click();
-        cy.get('#center_column > div > p > strong')
-        .should('have.text', 'Your order on My Store is complete.');
+        menuContentPage.goToTShirtMenu();
+        productListPage.addToCart();
+        productAddedModal.goProceedCheckout();
+        summaryPage.goProceedCheckout();
+        signInPage.loginUser();
+        addressPage.goProceedCheckout();
+        shippingPage.agreeTerms();
+        shippingPage.goProceedCheckout();
+        paymentPage.goPayByBank();
+        bankPaymentPage.goConfirmOrder();
+        orderSummary.getConfirmOrder().should('have.text', 'Your order on My Store is complete.');
     });
 });
