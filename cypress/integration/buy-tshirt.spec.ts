@@ -1,4 +1,15 @@
-import { MenuContentPage,ProductListPage,ProductAddedModal, SummaryPage,SignInPage, AddressPage, ShippingPage, PaymentPage, BankPaymentPage, OrderSummary } from '../page';
+import { 
+  MenuContentPage,
+  ProductListPage,
+  ProductAddedModal, 
+  SummaryPage,
+  SignInPage, 
+  AddressPage, 
+  ShippingPage, 
+  PaymentPage, 
+  BankPaymentPage, 
+  OrderSummary
+} from '../page';
 
 describe('Buy a t-shirt', () => {
     const menuContentPage: MenuContentPage = new MenuContentPage();
