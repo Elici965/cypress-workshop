@@ -1,4 +1,5 @@
 export class OrderSummary {
+
   private txtOrderComplete: string;
 
   constructor () {

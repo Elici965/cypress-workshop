@@ -1,4 +1,5 @@
 export class ProductListPage {
+
   private btnAdd: string;
   private btnGoShoppingCart: string;
 
