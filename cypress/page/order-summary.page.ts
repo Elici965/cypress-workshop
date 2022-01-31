@@ -1,12 +1,13 @@
 export class OrderSummary {
-    private txtOrderComplete: string;
 
-    constructor () {
-        this.txtOrderComplete = '#center_column > div > p > strong';
-    }
+  private txtOrderComplete: string;
 
-    public getConfirmOrder() {
-        var txt = cy.get(this.txtOrderComplete);
-        return txt;
-    }
+  constructor () {
+    this.txtOrderComplete = '.complete-header';
+  }
+
+  public getConfirmOrder() {
+    var txt = cy.get(this.txtOrderComplete);
+    return txt;
+  }
 }
