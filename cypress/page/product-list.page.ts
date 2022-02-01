@@ -1,11 +1,18 @@
 export class ProductListPage {
-    private btnAdd: string;
 
-    constructor () {
-        this.btnAdd = '#center_column a.button.ajax_add_to_cart_button.btn.btn-default';
-    }
+  private btnAdd: string;
+  private btnGoShoppingCart: string;
 
-    public addToCart() {
-        cy.get(this.btnAdd).click();
-    }
+  constructor () {
+    this.btnAdd = '#add-to-cart-sauce-labs-backpack';
+    this.btnGoShoppingCart = '.shopping_cart_link';
+  }
+
+  public addToCart() {
+    cy.get(this.btnAdd).click();
+  }
+
+  public goShoppingCart() {
+    cy.get(this.btnGoShoppingCart).click();
+  }
 }
