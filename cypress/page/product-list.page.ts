@@ -4,7 +4,7 @@ export class ProductListPage {
   private btnGoShoppingCart: string;
 
   constructor () {
-    this.btnAdd = '.pricebar #add-to-cart-sauce-labs-backpack';
+    this.btnAdd = '#add-to-cart-sauce-labs-backpack';
     this.btnGoShoppingCart = '.shopping_cart_link';
   }
 
