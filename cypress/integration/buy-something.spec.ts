@@ -29,7 +29,7 @@ describe('Buy something', () => {
         })
 
         describe('Then the order is finished and confirmed', () => {
-          it('Then the order is finished and confirmed', () => {
+          it('then the order should be finished and confirmed', () => {
             const orderSummary: OrderSummary = new OrderSummary();
             orderSummary.getConfirmOrder().should('have.text', 'THANK YOU FOR YOUR ORDER');
           })
