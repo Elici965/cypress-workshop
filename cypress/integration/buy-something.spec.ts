@@ -3,7 +3,7 @@ import {
 } from '../page';
 
 describe('Buy something', () => {
-  describe('Given a user is login to Saucedemo', () => {
+  describe('given the user is logged in Saucedemo', () => {
     before(() => {
       const loginPage: LoginPage = new LoginPage();
       cy.visit('https://www.saucedemo.com/');
