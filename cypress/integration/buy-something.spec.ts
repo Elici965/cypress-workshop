@@ -38,4 +38,3 @@ describe('Buy something', () => {
     })
   })
 })
-
