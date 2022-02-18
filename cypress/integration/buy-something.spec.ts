@@ -3,7 +3,7 @@ import {
 } from '../page';
 
 describe('Buy something', () => {
-  describe('given the user is logged in Saucedemo', () => {
+  describe('given a user is login to Saucedemo', () => {
     before(() => {
       const loginPage: LoginPage = new LoginPage();
       cy.visit('https://www.saucedemo.com/');
@@ -17,7 +17,7 @@ describe('Buy something', () => {
         productListPage.goShoppingCart();
       })
 
-      describe('And continue with the purchase process', () => {
+      describe('and continue with the purchase process, entering his information', () => {
         before(() => {
           const shoppingCartPage: ShoppingCart = new ShoppingCart();
           const checkout: Checkout = new Checkout();
@@ -28,8 +28,8 @@ describe('Buy something', () => {
           checkoutOverview.finishShopping();
         })
 
-        describe('Then the order is finished and confirmed', () => {
-          it(() => {
+        describe('then the order is finished and confirmed', () => {
+          it('then the order is finished and confirmed', () => {
             const orderSummary: OrderSummary = new OrderSummary();
             orderSummary.getConfirmOrder().should('have.text', 'THANK YOU FOR YOUR ORDER');
           })
