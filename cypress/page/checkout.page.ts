@@ -1,20 +1,20 @@
 export class Checkout {
-  private txtPrimerNombre: string;
-  private txtPrimerApellido: string;
-  private txtCodigoPostal: string;
+  private txtFirstName: string;
+  private txtLastName: string;
+  private txtPostalCode: string;
   private btnContinue: string;
 
   constructor () {
-    this.txtPrimerNombre = '#first-name';
-    this.txtPrimerApellido = '#last-name';
-    this.txtCodigoPostal = '#postal-code';
+    this.txtFirstName = '#first-name';
+    this.txtLastName = '#last-name';
+    this.txtPostalCode= '#postal-code';
     this.btnContinue = '#continue';
   }
 
-  public ingresarDatosComprador(){
-    cy.get(this.txtPrimerNombre).type('Elizabeth');
-    cy.get(this.txtPrimerApellido).type('Correa');
-    cy.get(this.txtCodigoPostal).type('23');
+  public EnterBuyerData(){
+    cy.get(this.txtFirstName).type('Elizabeth');
+    cy.get(this.txtLastName).type('Correa');
+    cy.get(this.txtPostalCode).type('23');
   }
   
   public continueShopping() {
