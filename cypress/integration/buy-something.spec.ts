@@ -2,8 +2,8 @@ import {
   LoginPage, ProductListPage, ShoppingCart, Checkout, CheckoutOverview, OrderSummary
 } from '../page';
 
-describe('Buy something', () => {
-  describe('given a user is login to Saucedemo', () => {
+describe('Buy a backpack', () => {
+  describe('given a user is logged in Saucedemo', () => {
     before(() => {
       const loginPage: LoginPage = new LoginPage();
       cy.visit('https://www.saucedemo.com/');
@@ -17,7 +17,7 @@ describe('Buy something', () => {
         productListPage.goShoppingCart();
       })
 
-      describe('and continue with the purchase process, entering his information', () => {
+      describe('and the user types buy data', () => {
         before(() => {
           const shoppingCartPage: ShoppingCart = new ShoppingCart();
           const checkout: Checkout = new Checkout();
@@ -28,7 +28,7 @@ describe('Buy something', () => {
           checkoutOverview.finishShopping();
         })
 
-        describe('then the order is finished and confirmed', () => {
+        describe('then the order should be finished and confirmed', () => {
           it('then the order is finished and confirmed', () => {
             const orderSummary: OrderSummary = new OrderSummary();
             orderSummary.getConfirmOrder().should('have.text', 'THANK YOU FOR YOUR ORDER');
