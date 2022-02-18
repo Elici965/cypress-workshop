@@ -10,7 +10,7 @@ describe('Buy something', () => {
       loginPage.loginUser();
     })
 
-    describe('when the user adds a product to the cart', () => {
+    describe('when the user adds a backpack to the cart', () => {
       before(() => {
         const productListPage: ProductListPage = new ProductListPage();
         productListPage.addToCart();
@@ -18,7 +18,7 @@ describe('Buy something', () => {
       })
 
       describe('And continue with the purchase process', () => {
-        before('And continue with the purchase process', () => {
+        before(() => {
           const shoppingCartPage: ShoppingCart = new ShoppingCart();
           const checkout: Checkout = new Checkout();
           const checkoutOverview: CheckoutOverview = new CheckoutOverview();
@@ -29,7 +29,7 @@ describe('Buy something', () => {
         })
 
         describe('Then the order is finished and confirmed', () => {
-          it('then the order should be finished and confirmed', () => {
+          it(() => {
             const orderSummary: OrderSummary = new OrderSummary();
             orderSummary.getConfirmOrder().should('have.text', 'THANK YOU FOR YOUR ORDER');
           })
