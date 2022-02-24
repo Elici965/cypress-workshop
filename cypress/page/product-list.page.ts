@@ -8,7 +8,7 @@ export class ProductListPage {
     this.products = '.inventory_item_name';
   }
 
-  public selectProduct (product: string) {
+  public selectProduct(product: string) {
     this.findByProduct(product).click();
   }
 
