@@ -13,7 +13,7 @@ describe('Buy a backpack', () => {
     describe('when the user adds a backpack to the cart', () => {
       before(() => {
         const productListPage: ProductListPage = new ProductListPage();
-        productListPage.addToCart();
+        productListPage.selectProduct('Backpack');
         productListPage.goShoppingCart();
       })
 
