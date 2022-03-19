@@ -10,9 +10,15 @@ import {
       })
     
     describe('when the user fills the form', () => {
-      it('when the user fills the form',() => {
+      before(() => {
         personalInformation.fillForm();
       }) 
-  })    
+
+    describe('the form is submited.', () => {
+      it('the form is submited.',() => {
+        personalInformation.submitForm()
+     }) 
+  })   
+}) 
 }) 
 }) 
