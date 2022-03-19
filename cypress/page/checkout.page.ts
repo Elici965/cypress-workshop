@@ -1,5 +1,4 @@
 export class Checkout {
-
   private txtFirstName: string;
   private txtLastName: string;
   private txtPostalCode: string;
