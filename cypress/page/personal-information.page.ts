@@ -29,7 +29,7 @@ export class PersonalInformation {
     cy.on('window:alert',(t)=>{expect(t).to.contains('Registration Done!')})
   }
 
-  public test() {
+  public checkIfFormIsSubmited() {
     cy.get(this.txtFullName).should('have.value', '')
     cy.get(this.txtEmail).should('have.value', '')
     cy.get(this.txtTelefono).should('have.value', '')
