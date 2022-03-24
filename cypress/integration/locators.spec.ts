@@ -17,13 +17,13 @@ import {
         personalInformation.fillForm();
     }) 
 
-    describe('then the information is submited.', () => 
+    describe('then the information should be submited.', () => 
     {
-      it('then the information is submited.',() => 
+      it('then the information should be submited.',() => 
       {
-        personalInformation.test();
+        personalInformation.checkIfFormIsSubmited();
       }) 
     })   
   }) 
 }) 
-}) 
+})
