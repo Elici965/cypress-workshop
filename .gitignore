@@ -9,3 +9,6 @@ cypress/plugins
 
 ### Ignore for VsCode
 .vscode
+
+### Ignore for mocha
+mochawesome-report
