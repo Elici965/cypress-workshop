@@ -1,18 +1,18 @@
 import {
-  PersonalInformation
-} from '../page';
+    PersonalInformation
+  } from '../page';
 
-describe('E2E - Fill Form', () => {
-  const personalInformation: PersonalInformation = new PersonalInformation();
-
-  describe('given a user enters the qavbox page', () => {
-    before(() => {
-      cy.visit('https://qavbox.github.io/demo/signup/');
-    })
+  describe('Fill Form', () => {
+    const personalInformation: PersonalInformation = new PersonalInformation();
+    describe('given a user enters the qavbox page', () => {
+      before(() => {
+        cy.visit('https://qavbox.github.io/demo/signup/');
+      })
 
     describe('when the user fills and submits the form', () => {
-      before(() => {
+       before(() => {
         personalInformation.fillForm();
+        personalInformation.submit("/resources/test.jpg")
       })
 
       it('then the information should be submited cleaning all form fields.', () => {
@@ -21,3 +21,4 @@ describe('E2E - Fill Form', () => {
     })
   })
 })
+

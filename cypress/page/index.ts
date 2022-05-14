@@ -5,3 +5,4 @@ export { Checkout } from './checkout.page';
 export { CheckoutOverview } from './checkoutOverview.page';
 export { OrderSummary } from './order-summary.page';
 export { PersonalInformation } from './personal-information.page';
+export { FramePage } from './i-frame.page';

@@ -1,14 +1,5 @@
-### Ignore for NodeJs
-node_modules
-
-### Ignore for cypress
 cypress/videos
 cypress/screenshots
-cypress/support
-cypress/plugins
-
-### Ignore for VsCode
+node_modules
 .vscode
-
-### Ignore for mocha
 mochawesome-report
