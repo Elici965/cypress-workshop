@@ -48,4 +48,13 @@ export class PersonalInformation {
       cy.get(this.selectTools).select('Cypress');
       cy.get(this.btnSubmit).click();
     }
+
+  public checkIfFormIsSubmited() {
+    cy.get(this.txtFullName).should('have.value', '')
+    cy.get(this.txtEmail).should('have.value', '')
+    cy.get(this.txtTelefono).should('have.value', '')
+    cy.get(this.lstGender).should('have.value', 'select')
+    cy.get(this.radioExperience).should('not.be.checked')
+    cy.get(this.CheckSkills).should('not.be.checked')
+  }
 }

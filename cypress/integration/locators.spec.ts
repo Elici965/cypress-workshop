@@ -9,10 +9,16 @@ import {
         cy.visit('https://qavbox.github.io/demo/signup/');
       })
 
-    describe('when the user fills the form', () => {
-      it('when the user fills the form',() => {
+    describe('when the user fills and submits the form', () => {
+       before(() => {
+        personalInformation.fillForm();
         personalInformation.submit("/resources/test.jpg")
       })
+
+      it('then the information should be submited cleaning all form fields.', () => {
+        personalInformation.checkIfFormIsSubmited();
+      })
+    })
   })
 })
-})
+
