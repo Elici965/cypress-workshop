@@ -1,3 +1,5 @@
+import 'cypress-file-upload';
+
 export class PersonalInformation {
 
     private txtFullName: string;
@@ -8,6 +10,7 @@ export class PersonalInformation {
     private CheckSkills: string;
     private selectTools: string;
     private btnSubmit: string;
+    private btnFiles: string;
 
     constructor () {
       this.txtFullName = '#username';
@@ -18,6 +21,7 @@ export class PersonalInformation {
       this.CheckSkills= 'input[type="checkbox"]';
       this.selectTools = 'select[id="tools"]';
       this.btnSubmit = '#submit';
+      this.btnFiles = 'input[type="file"]'
     }
 
 
