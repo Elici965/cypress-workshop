@@ -26,7 +26,6 @@ export class PersonalInformation {
 
 
     public fillForm() {
-      cy.visit('https://qavbox.github.io/demo/signup/')
       cy.get(this.txtFullName).type("Elizabeth");
       cy.get(this.txtEmail).type("elizabeth.Correa@gmail.com");
       cy.get(this.txtTelefono).type("2345432");
