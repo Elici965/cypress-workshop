@@ -14,6 +14,10 @@ describe('Fill Form', () => {
         personalInformation.fillForm()
         personalInformation.submit("/resources/test.jpg")
       })
+
+      it('then the information should be submited cleaning all form fields.', () => {
+        personalInformation.checkIfFormIsSubmited();
+      })
     })
   })
 })
