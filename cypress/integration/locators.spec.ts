@@ -11,7 +11,6 @@ import {
 
     describe('when the user fills the form', () => {
       it('when the user fills the form',() => {
-        personalInformation.fillForm();
         personalInformation.submit("/resources/test.jpg")
       })
   })
